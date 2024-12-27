@@ -3,6 +3,7 @@
 KAG开源框架介绍及使用KAG实现知识增强生成应用                                                                            
 本次实现功能为:产品模式测试、开发者模式测试                              
 相关视频:                  
+https://www.bilibili.com/video/BV1qWCsY1EtZ/                      
 https://youtu.be/uhg5l5-K6rE                     
 
 ## 1.2 KAG框架
