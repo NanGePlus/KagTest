@@ -1,10 +1,12 @@
 # 1、介绍
-## 1.1 主要内容                      
-KAG开源框架介绍及使用KAG实现知识增强生成应用                                                                            
-本次实现功能为:产品模式测试、开发者模式测试                              
+## 1.1 主要内容                  
+**(第一期)[2024.12.10]KAG开源框架介绍及使用KAG实现知识增强生成应用**                              
+主要内容:实现功能为产品模式测试、开发者模式测试                  
 相关视频:                  
 https://www.bilibili.com/video/BV1qWCsY1EtZ/                      
-https://youtu.be/uhg5l5-K6rE                     
+https://youtu.be/uhg5l5-K6rE             
+**(第二期)[2025.01.08]开发者模式测试，自定义schema、prompt、构建索引、检索**                              
+主要内容:实现功能为开发者模式测试，自定义schema、prompt、构建索引、检索                                
 
 ## 1.2 KAG框架
 **(1)KAG是什么**               
@@ -14,15 +16,15 @@ OpenSPG是蚂蚁集团结合多年金融领域多元场景知识图谱构建与�
 官方网址:https://openspg.yuque.com/ndx6g9/0.5/figkrornp0qwelhl                                                                                                                           
 Github地址:https://github.com/OpenSPG/KAG                           
 **(2)KAG技术框架**                    
-kag框架包括 kg-builder、kg-solver、kag-model 三部分。v0.5版本发布只涉及前两部分，kag-model 将在后续逐步开源发布                        
-**kg-builder**
+kag框架包括 kag-builder、kag-solver、kag-model 三部分。v0.5版本发布只涉及前两部分，kag-model 将在后续逐步开源发布                        
+**kag-builder**
 实现了一种对大型语言模型（LLM）友好的知识表示，在 DIKW（Data、Information、Knowledge和Wisdom）的层次结构基础上，升级 SPG 知识表示能力               
 在同一知识类型（如实体类型、事件类型）上兼容无 schema 约束的信息提取和有 schema 约束的专业知识构建，并支持图结构与原始文本块之间的互索引表示，为推理问答阶段的高效检索提供支持        
 DIKW金字塔很好地描述了人类认识世界的规律和层次结构，分别是：                    
 数据（Data原始的事实集合）、信息（Information可被分析测量的结构化数据）、知识（Knowledge需要洞察力和理解力进行学习）、智慧（Wisdom推断未来发生的相关性，指导行动）                      
 数据是基础，信息是支撑，知识是核心，智慧是灵魂              
 自底向上每一层都比下一层增加某些特质。数据层是最基本的原始素材；信息层加入了有逻辑的数据内容；知识层提炼信息之间的联系，加入“如何去使用”；智慧层加入预测能力，能回答“为什么用”                           
-**kg-solver**                       
+**kag-solver**                       
 采用逻辑符号引导的混合求解和推理引擎，该引擎包括三种类型的运算符：规划、推理和检索，将自然语言问题转化为结合语言和符号的问题求解过程                               
 在这个过程中，每一步都可以利用不同的运算符，如精确匹配检索、文本检索、数值计算或语义推理，从而实现四种不同问题求解过程的集成：检索、知识图谱推理、语言推理和数值计算                         
 
@@ -82,7 +84,7 @@ https://youtu.be/hD09V7jaXSo
 **提示词中英文配置:**                 
 {"biz_scene":"default","language":"zh"}                            
 
-## 4.2 开发者模式测试
+## 4.2 开发者模式测试-默认配置参数
 ### (1)安装依赖
 新建命令行终端，按照如下指令进行依赖安装                                         
 cd KAG                          
@@ -93,7 +95,9 @@ knext --version
 先修改项目配置文件example.cfg,根据自己的实际情况，设置embedding、LLM配置参数                     
 ### (3)使用配置文件初始化项目                                   
 新建命令行终端，运行如下命令进行项目创建和初始化                                     
-knext project create --config_path ./example.cfg                                
+knext project create --config_path ./example.cfg       
+项目初始化完成后，进入到对应的文件夹下，根据实际业务需求调整schema，调整完成后再执行提交schema                  
+knext schema commit            
 ### (4)脚本测试                                    
 相关代码参考根目录下Demo文件夹                                                 
 ### (4-1)准备测试文档    
@@ -101,16 +105,40 @@ knext project create --config_path ./example.cfg
 ### (4-2)构建索引                 
 打开命令行终端，进入脚本所在目录，运行 python indexer.py 命令                        
 ### (4-3)检索                       
-打开命令行终端，进入脚本所在目录，运行 python query.py 命令                          
+打开命令行终端，进入脚本所在目录，运行 python query.py 命令              
 
-
-
-
-
-
-
-
-
-
-
+## 4.3 开发者模式测试-自定义schema、prompt、构建索引                   
+## 4.3.1 前置工作
+### (1) 部署OpenSPG-Server                               
+部署方式两种:docker服务或源码部署，这里使用docker部署和启动OpenSPG-Server，运行的指令为:                                
+docker compose -f docker-compose.yml up -d                                                      
+对于docker的使用，这里不做详细的赘述了，大家可以去看我这期视频，里面有对于docker非常详细的讲解，从安装部署到使用                       
+https://www.bilibili.com/video/BV1LhUAYFEku/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                     
+https://youtu.be/hD09V7jaXSo                    
+### (2)安装依赖
+下载KAG源码 https://github.com/OpenSPG/KAG 解压后将源码工程拷贝到项目根目录，截止2025-01-07,最新版本是v0.5.1           
+新建命令行终端，按照如下指令进行依赖安装               
+cd KAG                          
+pip install -e .                    
+安装完成之后可以运行如下指令验证是否安装成功                               
+knext --version                                        
+## 4.3.2 测试案例     
+### (1)调整配置文件                                                          
+将根目录下的other/config目录下的example.cfg文件拷贝一份到根目录,根据自己的业务修改配置参数，namespace、embedding、LLM等配置参数                                       
+### (2)使用配置文件初始化项目                                   
+新建命令行终端，运行如下命令进行项目创建和初始化                                     
+knext project create --config_path ./example.cfg          
+### (3)提交schema
+项目初始化完成后，进入到对应的项目文件夹下，根据实际业务需求调整schema，调整完成后再执行提交schema                
+knext schema commit                     
+### (4)构建索引                                   
+首先将文档拷贝到新建项目文件夹中的builder/data下，支持txt、pdf、markdown、docx、json、csv等                         
+并可以根据自身业务需求，设置相关prompt内容:ner.py、std.py、triple.py                                       
+打开命令行终端，进入脚本所在目录builder，运行 python indexer.py 命令                               
+索引构建成功后，可登录到 http://127.0.0.1:8887/或 http://127.0.0.1:7474/browser/ 查看知识图谱                   
+图数据库账号密码：neo4j neo4j@openspg                     
+### (5)检索                             
+打开命令行终端，进入脚本所在目录solver，运行 python query.py 命令                            
+根据自身业务需求，可设置相关prompt内容:logic_form_plan.py、question_ner.py、resp_generator.py                         
+也可以在产品端进行测试 http://127.0.0.1:8887/                  
 
