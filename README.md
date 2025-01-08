@@ -5,8 +5,8 @@
 相关视频:                  
 https://www.bilibili.com/video/BV1qWCsY1EtZ/                      
 https://youtu.be/uhg5l5-K6rE             
-**(第二期)[2025.01.08]开发者模式测试，自定义schema、prompt、构建索引、检索**                              
-主要内容:实现功能为开发者模式测试，自定义schema、prompt、构建索引、检索                                
+**(第二期)[2025.01.08]开发者模式开发测试流程**                              
+主要内容:着重为大家演示开发者模式开发测试流程，自定义schema、构建索引(自定义prompt)、检索(自定义prompt)，支持GPT大模型、国产大模型(阿里通义千问)、本地开源大模型(Ollama)                                                                  
 
 ## 1.2 KAG框架
 **(1)KAG是什么**               
@@ -107,7 +107,7 @@ knext schema commit
 ### (4-3)检索                       
 打开命令行终端，进入脚本所在目录，运行 python query.py 命令              
 
-## 4.3 开发者模式测试-自定义schema、prompt、构建索引                   
+## 4.3 开发者模式测试-自定义schema、构建索引(自定义prompt)、检索(自定义prompt)，支持GPT大模型、国产大模型(阿里通义千问)、本地开源大模型(Ollama)                                               
 ## 4.3.1 前置工作
 ### (1) 部署OpenSPG-Server                               
 部署方式两种:docker服务或源码部署，这里使用docker部署和启动OpenSPG-Server，运行的指令为:                                
