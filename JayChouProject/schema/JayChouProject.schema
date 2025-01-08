@@ -1,0 +1,69 @@
+namespace JayChouProject
+
+Chunk(文本块): EntityType
+     properties:
+        content(内容): Text
+          index: TextAndVector
+
+Date(日期): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+GeographicLocation(地理位置): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+Organization(组织机构): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+Person(人物): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+Works(作品): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+Albums(专辑): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+Roles(角色): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+Awards(获奖): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
+
+Others(其他): EntityType
+     properties:
+        desc(描述): Text
+            index: TextAndVector
+        semanticType(语义类型): Text
+            index: Text
