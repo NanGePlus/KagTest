@@ -5,11 +5,13 @@
 相关视频:                  
 https://www.bilibili.com/video/BV1qWCsY1EtZ/                      
 https://youtu.be/uhg5l5-K6rE             
-**(第二期)[2025.01.08]KAG知识增强生成开发模式高阶开发指南，比RAG更强大的检索和推理框架，自定义schema、构建索引、求解推理、知识图谱、GPT大模型、国产大模型、开源大模型**                              
-主要内容:着重为大家演示开发者模式开发测试流程，自定义schema、构建索引(自定义prompt)、检索(自定义prompt)，支持GPT大模型、国产大模型(阿里通义千问)、本地开源大模型(Ollama)                    
+**(第二期)[2025.01.08]KAG知识增强生成开发模式高阶开发指南，比RAG更强大的检索和推理框架，自定义schema、构建索引、求解推理、知识图谱、GPT大模型、国产大模型、开源大模型**               
+主要内容:着重为大家演示开发者模式开发测试流程，自定义schema、构建索引(自定义prompt)、检索(自定义prompt)，支持GPT大模型、国产大模型(阿里通义千问)、本地开源大模型(Ollama)              
 相关视频:                
 https://www.bilibili.com/video/BV1SJreYpEBT/                   
-https://youtu.be/pqSdp6yCg7U                    
+https://youtu.be/pqSdp6yCg7U     
+**(第三期)[2025.01.10]KAG知识增强生成 KAG新版本V0.6功能测试**                                 
+主要内容:测试版本升级后的产品模式、开发者模式使用          
 
 ## 1.2 KAG框架
 **(1)KAG是什么**               
