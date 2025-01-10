@@ -10,8 +10,12 @@ https://youtu.be/uhg5l5-K6rE
 相关视频:                
 https://www.bilibili.com/video/BV1SJreYpEBT/                   
 https://youtu.be/pqSdp6yCg7U     
-**(第三期)[2025.01.10]KAG知识增强生成 KAG新版本V0.6功能测试**                                 
+**(第三期)[2025.01.10]OpenSPG KAG新版本V0.6重大更新，开发者模式和产品模式实测，提供了一个更加强大且适应多样化应用场景的知识管理平台，极大地提升了系统的灵活性、易用性**                                          
 主要内容:测试版本升级后的产品模式、开发者模式使用          
+相关视频:               
+https://www.bilibili.com/video/BV1MBcneaE7M/                              
+https://youtu.be/-OeZkqnAGaM                 
+
 
 ## 1.2 KAG框架
 **(1)KAG是什么**               
