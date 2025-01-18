@@ -17,6 +17,7 @@ https://www.bilibili.com/video/BV1MBcneaE7M/
 https://youtu.be/-OeZkqnAGaM                 
 **(第四期)[2025.01.18]OpenSPG KAG框架V0.6版本在开发者模式下进行多种文件类型、多个文件按批次进行知识索引增量构建测试**                                                                     
 主要内容:提供一个测试脚本，提供一种方案思路处理多种文件类型、多个文件按批次进行知识索引增量构建                          
+https://youtu.be/YhwV7nIxvUI                    
 
 
 ## 1.2 KAG框架
