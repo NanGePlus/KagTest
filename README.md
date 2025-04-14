@@ -43,22 +43,23 @@ DIKW金字塔很好地描述了人类认识世界的规律和层次结构，分�
 
 
 # 2、前期准备工作
-## 2.1 开发环境搭建:anaconda、pycharm
-anaconda:提供python虚拟环境，官网下载对应系统版本的安装包安装即可                                      
-pycharm:提供集成开发环境，官网下载社区版本安装包安装即可                                               
-**可参考如下视频:**                      
-集成开发环境搭建Anaconda+PyCharm                                                          
-https://www.bilibili.com/video/BV1q9HxeEEtT/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                             
-https://youtu.be/myVgyitFzrA          
+## 2.1 集成开发环境搭建  
+anaconda提供python虚拟环境,pycharm提供集成开发环境                                              
+**具体参考如下视频:**                        
+【大模型应用开发-入门系列】03 集成开发环境搭建-开发前准备工作                         
+https://youtu.be/KyfGduq5d7w                     
+https://www.bilibili.com/video/BV1nvdpYCE33/                      
 
-## 2.2 大模型相关配置
-(1)GPT大模型使用方案(第三方代理方式)                               
-(2)非GPT大模型(阿里通义千问、讯飞星火、智谱等大模型)使用方案(OneAPI方式)                         
-(3)本地开源大模型使用方案(Ollama方式)                                             
-**可参考如下视频:**                                   
-提供一种LLM集成解决方案，一份代码支持快速同时支持gpt大模型、国产大模型(通义千问、文心一言、百度千帆、讯飞星火等)、本地开源大模型(Ollama)                       
-https://www.bilibili.com/video/BV12PCmYZEDt/?vd_source=30acb5331e4f5739ebbad50f7cc6b949                 
-https://youtu.be/CgZsdK43tcY           
+## 2.2 大模型LLM服务接口调用方案
+(1)gpt大模型等国外大模型使用方案                  
+国内无法直接访问，可以使用代理的方式，具体代理方案自己选择                        
+这里推荐大家使用:https://nangeai.top/register?aff=Vxlp                        
+(2)非gpt大模型方案 OneAPI方式或大模型厂商原生接口                                              
+(3)本地开源大模型方案(Ollama方式)                                              
+**具体参考如下视频:**                                           
+【大模型应用开发-入门系列】04 大模型LLM服务接口调用方案                    
+https://youtu.be/mTrgVllUl7Y               
+https://www.bilibili.com/video/BV1BvduYKE75/                                                          
 
 
 # 3、项目初始化
